@@ -65,21 +65,52 @@ main {
     position: relative;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     overflow: hidden;
-   & #hero {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-       & h1 {
-         font-size: 3em;
-        }
-    & h2 {
+    & #hero {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      & h1 {
+        font-size: 3em;
+      }
+      & h2 {
         font-size: 2.5rem;
-
+      }
     }
-   }
 
-    /* & a {
+    & #bienvenue {
+      align-items: center;
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      & h2 {
+        font-size: 2.5rem;
+        text-align: center;
+      }
+      & p {
+        text-align: justify;
+        min-width: 75%;
+        max-width: 91%;
+        font-size: 1.5rem;
+      }
+      & button {
+        background-color: var(--color4);
+        color: var(--color1);
+        padding: 1rem 1rem;
+        border-radius: 8px;
+        margin-top: 1rem;
+        transition: all 0.3s ease;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      & button:hover {
+        background-color: var(--color3);
+        color: var(--color5);
+      }
+    }
+
+    & a {
       color: var(--color4);
       text-decoration: none;
     }
@@ -87,5 +118,5 @@ main {
     & a:hover {
       color: var(--color3);
     }
-  } */
+  }
 }
