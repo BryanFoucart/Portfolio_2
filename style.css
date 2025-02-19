@@ -45,7 +45,7 @@ header {
     text-align: center;
     padding: 12px 0;
     transition: all 0.3s ease;
-    color: white;
+    color: var(--color4);
     font-size: 36px;
   }
 
@@ -59,14 +59,27 @@ main {
   color: var(--color5);
 
   & section#Accueil {
+    /* padding-top: 61px; */
     min-height: 100vh;
     display: flex;
     position: relative;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+   & #hero {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+       & h1 {
+         font-size: 3em;
+        }
+    & h2 {
+        font-size: 2.5rem;
 
-    & a {
+    }
+   }
+
+    /* & a {
       color: var(--color4);
       text-decoration: none;
     }
@@ -74,5 +87,5 @@ main {
     & a:hover {
       color: var(--color3);
     }
-  }
+  } */
 }
