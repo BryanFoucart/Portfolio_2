@@ -4,6 +4,7 @@
   --color3: #fca311;
   --color4: #e5e5e5;
   --color5: #ffffff;
+  --titre: "Roboto", serif;
 }
 
 img {
@@ -28,6 +29,14 @@ ul {
   }
 }
 
+.roboto-<uniquifier > {
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings: "wdth" 500;
+}
+
 header {
   z-index: 1000;
   position: fixed;
@@ -37,6 +46,7 @@ header {
     width: 100%;
     background-color: var(--color1);
     overflow: auto;
+    margin-bottom: 8px;
   }
 
   .navbar a {
@@ -72,10 +82,15 @@ main {
       flex-direction: column;
       text-align: center;
       & h1 {
-        font-size: 3em;
+        font-size: 3rem;
+        font-family: var(--titre);
+      }
+      & img {
+        border-radius: 8px;
       }
       & h2 {
         font-size: 2.5rem;
+        font-family: var(--titre);
       }
     }
 
@@ -117,6 +132,53 @@ main {
 
     & a:hover {
       color: var(--color3);
+    }
+  }
+}
+
+@media screen and (max-width: 1212px) {
+  header {
+    .navbar a {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 544px) {
+  header {
+    .navbar a {
+      font-size: 0.7rem;
+    }
+  }
+
+  main {
+    & section#Accueil {
+      padding-top: 36px;
+      & #hero {
+        & h1 {
+          font-size: 2rem;
+        }
+        & img {
+          max-width: 91%;
+          margin: auto;
+        }
+        & h2 {
+          font-size: 1.5rem;
+        }
+      }
+
+      & #bienvenue {
+        & h2 {
+          font-size: 1.5rem;
+        }
+        & p {
+          font-size: 1rem;
+        }
+        & button {
+          padding: 0.5rem 0.5rem;
+          font-size: 1rem;
+        }
+      }
     }
   }
 }
