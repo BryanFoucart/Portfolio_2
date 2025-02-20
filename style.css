@@ -4,13 +4,14 @@
   --color3: #fca311;
   --color4: #e5e5e5;
   --color5: #ffffff;
-  --titre: "Roboto", serif;
+  --titre: "Roboto", sans-serif;
 }
 
 img {
   max-width: 100%;
 }
-button {
+button,
+a {
   cursor: pointer;
   border: none;
 }
@@ -29,10 +30,10 @@ ul {
   }
 }
 
-.roboto-<uniquifier > {
+.roboto {
   font-family: "Roboto", serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: 400;
   font-style: normal;
   font-variation-settings: "wdth" 500;
 }
@@ -87,9 +88,12 @@ main {
       }
       & img {
         border-radius: 8px;
+        margin-top: 12px;
+        margin-bottom: 12px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
       }
       & h2 {
-        font-size: 2.5rem;
+        font-size: 2rem;
         font-family: var(--titre);
       }
     }
@@ -100,13 +104,13 @@ main {
       display: flex;
       flex-direction: column;
       & h2 {
-        font-size: 2.5rem;
+        font-size: 2rem;
         text-align: center;
       }
       & p {
         text-align: justify;
-        min-width: 75%;
-        max-width: 91%;
+        width: 91%;
+        max-width: 600px;
         font-size: 1.5rem;
       }
       & button {
@@ -115,7 +119,7 @@ main {
         padding: 1rem 1rem;
         border-radius: 8px;
         margin-top: 1rem;
-        transition: all 0.3s ease;
+        transition: all 0.3s ease-in-out;
         margin-left: auto;
         margin-right: auto;
         & a {
@@ -152,8 +156,20 @@ main {
 
 @media screen and (max-width: 544px) {
   header {
+    & .navbar {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
     & .navbar a {
       font-size: 1.5rem;
+      width: auto;
+      padding: 10px;
+    }
+    & .navbar ul {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
     }
   }
 
