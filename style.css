@@ -41,7 +41,10 @@ header {
   z-index: 1000;
   position: fixed;
   width: 100%;
-
+  & .container-fs {
+    width: 100vw;
+    height: calc(100vh - var(--nav-height));
+  }
   & .navbar {
     width: 100%;
     background-color: var(--color1);
@@ -136,24 +139,27 @@ main {
   }
 }
 
-@media screen and (max-width: 1212px) {
+@media screen and (max-width: 1220px) {
   header {
     .navbar a {
-      font-size: 1rem;
+      font-size: 2rem;
+    }
+    & span.text {
+      display: none;
     }
   }
 }
 
 @media screen and (max-width: 544px) {
   header {
-    .navbar a {
-      font-size: 0.7rem;
+    & .navbar a {
+      font-size: 1.5rem;
     }
   }
 
   main {
     & section#Accueil {
-      padding-top: 36px;
+      padding-top: var(--nav-height);
       & #hero {
         & h1 {
           font-size: 2rem;
