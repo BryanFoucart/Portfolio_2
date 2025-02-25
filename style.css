@@ -4,12 +4,14 @@
   --color3: #fca311;
   --color4: #e5e5e5;
   --color5: #ffffff;
+  --titre: "Roboto", sans-serif;
 }
 
 img {
   max-width: 100%;
 }
-button {
+button,
+a {
   cursor: pointer;
   border: none;
 }
@@ -28,6 +30,14 @@ ul {
   }
 }
 
+.roboto {
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 500;
+}
+
 header {
   z-index: 1000;
   position: fixed;
@@ -37,15 +47,17 @@ header {
     width: 100%;
     background-color: var(--color1);
     overflow: auto;
+    /* margin-bottom: 8px; */
   }
 
   .navbar a {
     float: left;
     width: 20%;
     text-align: center;
-    padding: 12px 0;
+    padding: 5px 0;
+    /* padding: 12px 0; */
     transition: all 0.3s ease;
-    color: white;
+    color: var(--color4);
     font-size: 36px;
   }
 
@@ -59,12 +71,67 @@ main {
   color: var(--color5);
 
   & section#Accueil {
+    /* padding: 1px; */
     min-height: 100vh;
     display: flex;
     position: relative;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     overflow: hidden;
+    & #hero {
+      /* display: flex; */
+      /* flex-direction: column; */
+      text-align: center;
+      & h1 {
+        font-size: 3rem;
+        font-family: var(--titre);
+      }
+      & img {
+        border-radius: 8px;
+        margin-top: 12px;
+        margin-bottom: 12px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      }
+      & h2 {
+        font-size: 2rem;
+        font-family: var(--titre);
+      }
+    }
+
+    & #bienvenue {
+      align-items: center;
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      & h2 {
+        font-size: 2rem;
+        text-align: center;
+      }
+      & p {
+        text-align: justify;
+        width: 91%;
+        max-width: 600px;
+        font-size: 1.5rem;
+      }
+      & button {
+        background-color: var(--color4);
+        color: var(--color1);
+        padding: 1rem 1rem;
+        border-radius: 8px;
+        margin-top: 1rem;
+        transition: all 0.3s ease-in-out;
+        margin-left: auto;
+        margin-right: auto;
+        & a {
+          color: var(--color1);
+        }
+      }
+      & button:hover {
+        background-color: var(--color3);
+        color: var(--color5);
+      }
+    }
 
     & a {
       color: var(--color4);
@@ -73,6 +140,93 @@ main {
 
     & a:hover {
       color: var(--color3);
+    }
+  }
+  & section#A_propos {
+    /* padding: 1px; */
+    min-height: 100vh;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    & #apropos {
+      /* display: flex; */
+      /* flex-direction: column; */
+      text-align: center;
+      & img {
+        /* width: 91%; */
+        border-radius: 8px;
+        margin-top: 12px;
+        margin-bottom: 12px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      }
+      & h2 {
+        font-size: 2rem;
+        font-family: var(--titre);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1220px) {
+  header {
+    .navbar a {
+      font-size: 2rem;
+    }
+    & span.text {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 544px) {
+  header {
+    & .navbar {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    & .navbar a {
+      font-size: 1.5rem;
+      width: auto;
+      padding: 10px;
+    }
+    & .navbar ul {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+    }
+  }
+
+  main {
+    & section#Accueil {
+      & #hero {
+        & h1 {
+          font-size: 2rem;
+        }
+        & img {
+          max-width: 91%;
+          margin: auto;
+        }
+        & h2 {
+          font-size: 1.5rem;
+        }
+      }
+
+      & #bienvenue {
+        & h2 {
+          font-size: 1.5rem;
+        }
+        & p {
+          font-size: 1rem;
+        }
+        & button {
+          padding: 0.5rem 0.5rem;
+          font-size: 1rem;
+        }
+      }
     }
   }
 }
