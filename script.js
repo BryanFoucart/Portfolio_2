@@ -7,14 +7,17 @@ const competencesSection = document.getElementById("Competences"); // Sélection
 const projetsSection = document.getElementById("Projets"); // Sélectionne la section#Projets
 const contactSection = document.getElementById("Contact"); // Sélectionne la section#Contact
 
-// Fonction pour ajuster le padding des sections
+// Fonction pour ajuster le padding des sections (et la hauteur de la section Accueil)
 function adjustSectionPadding() {
   // Obtenir la hauteur de la barre de navigation
   const navbarHeight = navbar.offsetHeight;
 
-  // Appliquer un padding-top à chaque section pour éviter que le contenu ne soit caché
+  // Ajuste le padding-top des sections en fonction de la hauteur de la navbar
   accueilSection.style.paddingTop = `${navbarHeight}px`;
+  accueilSection.style.minHeight = `calc(100vh - ${navbarHeight * 2}px)`; // Ajuster la hauteur minimale de la section Accueil
   aproposSection.style.paddingTop = `${navbarHeight}px`;
+  competencesSection.style.paddingTop = `${navbarHeight}px`;
+  projetsSection.style.paddingTop = `${navbarHeight}px`;
   contactSection.style.paddingTop = `${navbarHeight}px`;
 }
 

@@ -456,7 +456,7 @@ main {
         }
       }
     }
-    section#A_propos {
+    & section#A_propos {
       & h2 {
         font-size: 2rem;
       }

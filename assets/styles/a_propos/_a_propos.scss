@@ -1,0 +1,251 @@
+section#A_propos {
+  min-height: 100vh;
+  & h2 {
+    font-size: 3rem;
+    text-align: center;
+    font-family: var(--titre);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  & #container-A_propos {
+    display: flex;
+    justify-content: space-around;
+    gap: 8px;
+
+    & #a_propos_left,
+    #a_propos_right {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      max-width: 600px;
+      background-color: rgba(var(--color4), 0.6);
+      border: 2px solid rgba(var(--color3), 0.8);
+      border-radius: 15px;
+    }
+
+    & #a_propos_left {
+      justify-content: center;
+
+      & img {
+        max-width: 50%;
+        border-radius: 15px;
+        box-shadow: 0px 4px 10px rgba(var(--color3), 0.5);
+        margin: 12px auto;
+      }
+      & p {
+        max-width: 80%;
+        text-align: justify;
+        margin: 1rem auto;
+        font-size: 1.3rem;
+        font-family: var(--texte);
+      }
+    }
+    & #a_propos_right {
+      text-align: justify;
+      justify-content: space-evenly;
+
+      & h3 {
+        font-size: 2rem;
+        text-align: center;
+        font-family: var(--sous-titre);
+        margin-top: 1rem;
+      }
+      & ul {
+        & li {
+          width: 90%;
+          font-size: 1.1rem;
+          font-family: var(--texte);
+          margin-top: 5px;
+          transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+        & li:hover {
+          transform: translateX(10px);
+          transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+          color: rgba(var(--color2), 1);
+        }
+      }
+
+      & ul#diplomes {
+        & li {
+          position: relative;
+          left: 25px;
+        }
+      }
+
+      & ul:not(#diplomes) {
+        list-style-type: circle;
+        & li {
+          position: relative;
+          left: 50px;
+        }
+      }
+      & .button {
+        display: flex;
+        margin-bottom: 1rem;
+
+        & a {
+          margin: 1rem auto 0 auto;
+          color: rgba(var(--color1), 1);
+          & button {
+            background-color: rgba(var(--color4), 1);
+            color: rgba(var(--color1), 1);
+            padding: 1rem 1rem;
+            border-radius: 8px;
+            font-family: var(--button);
+            transition: all 0.3s ease-in-out;
+          }
+          & button:hover {
+            background-color: rgba(var(--color3), 1);
+            color: rgba(var(--color5), 1);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  section#A_propos {
+    & #container-A_propos {
+      & #a_propos_left,
+      #a_propos_right {
+        width: 50%;
+        max-width: 550px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  section#A_propos {
+    & h2 {
+      font-size: 2.7rem;
+    }
+    & #container-A_propos {
+      & #a_propos_left,
+      #a_propos_right {
+        width: 40%;
+        max-width: 500px;
+      }
+
+      & #a_propos_left {
+        & img {
+          margin: 12px auto;
+        }
+        & p {
+          font-size: 1.2rem;
+        }
+      }
+      & #a_propos_right {
+        & h3 {
+          font-size: 1.8rem;
+          margin-top: 1rem;
+        }
+        & ul {
+          & li {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  section#A_propos {
+    & h2 {
+      font-size: 2.5rem;
+    }
+    & #container-A_propos {
+      & #a_propos_left,
+      #a_propos_right {
+        width: 40%;
+        max-width: 450px;
+      }
+
+      & #a_propos_left {
+        & img {
+          margin: 8px auto;
+        }
+        & p {
+          font-size: 1.1rem;
+        }
+      }
+      & #a_propos_right {
+        & h3 {
+          font-size: 1.6rem;
+          margin-top: 0.8rem;
+        }
+        & ul {
+          & li {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section#A_propos {
+    & h2 {
+      font-size: 2.3rem;
+    }
+    & #container-A_propos {
+      flex-direction: column;
+      align-items: center;
+
+      & #a_propos_left,
+      #a_propos_right {
+        width: 80%;
+        max-width: 450px;
+      }
+
+      & #a_propos_left {
+        & p {
+          font-size: 1.1rem;
+        }
+      }
+      & #a_propos_right {
+        & h3 {
+          font-size: 1.6rem;
+          margin-top: 0.8rem;
+        }
+        & ul {
+          & li {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 544px) {
+  section#A_propos {
+    & h2 {
+      font-size: 2rem;
+    }
+    & #container-A_propos {
+      & #a_propos_left,
+      #a_propos_right {
+        max-width: 400px;
+      }
+
+      & #a_propos_left {
+        & p {
+          font-size: 1rem;
+        }
+      }
+      & #a_propos_right {
+        & h3 {
+          font-size: 1.3rem;
+        }
+        & ul {
+          & li {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

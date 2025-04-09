@@ -4,16 +4,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./reset.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <meta name="description" content="Portfolio de Bryan Foucart, développeur web junior" />
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet" />
+    rel="stylesheet" /> -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./assets/styles/style.css" />
   <script type="module" src="./script.js"></script>
   <title>Mon Portfolio</title>
 </head>
@@ -23,7 +23,7 @@
     <nav class="navbar">
       <ul>
         <li>
-          <a href="#"><i class="fa fa-home" title="Accueil">
+          <a href="#Accueil"><i class="fa fa-home" title="Accueil">
               <span class="text"> Accueil</span></i></a>
         </li>
         <li>
@@ -59,15 +59,15 @@
       </div>
     </section>
     <section id="A_propos">
-      <h2>A propos</h2>
+      <h2>A propos de moi</h2>
       <div id="container-A_propos">
-        <div id="apropos">
+        <div id="a_propos_left">
           <img src="./Sans titre-1.jpg" alt="Bryan Foucart" />
           <p>
             Je m'appelle Bryan Foucart et je suis développeur web junior. Je suis passionné par le développement web et je suis actuellement en formation chez l'AFCI d'Arras. Je suis à la recherche d'une entreprise pour débuter ma carrière.
           </p>
         </div>
-        <div id="apropos2">
+        <div id="a_propos_right">
           <h3>Mes diplômes</h3>
           <ul id="diplomes">
             <li>2025 - Titre Professionnel Développeur Web et Web Mobile</li>

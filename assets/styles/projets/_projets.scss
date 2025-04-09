@@ -1,0 +1,19 @@
+section#Projets {
+  max-width: calc(100vw - 125px);
+  margin: auto;
+}
+ul.galerie-grid {
+  padding: 0;
+  column-count: 2;
+  column-gap: 10px;
+}
+ul.galerie-grid li.galerie-item {
+  margin-bottom: 10px;
+  break-inside: avoid;
+}
+ul.galerie-grid li.galerie-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}

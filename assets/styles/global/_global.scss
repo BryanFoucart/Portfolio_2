@@ -1,0 +1,86 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("./../font/Roboto/Roboto.eot");
+  src: url("./../font/Roboto/Roboto.eot?#iefix") format("embedded-opentype"),
+    url("./../font/Roboto/Roboto.woff2") format("woff2"),
+    url("./../font/Roboto/Roboto.woff") format("woff"),
+    url("./../font/Roboto/Roboto.ttf") format("truetype"),
+    url("./../font/Roboto/Roboto.svg#Roboto") format("svg");
+}
+
+@font-face {
+  font-family: "Fira_Sans_Condensed";
+  src: url("./../font/Fira_Sans_Condensed/Fira_Sans_Condensed.eot");
+  src: url("./../font/Fira_Sans_Condensed/Fira_Sans_Condensed.eot?#iefix")
+      format("embedded-opentype"),
+    url("./../font/Fira_Sans_Condensed/Fira_Sans_Condensed.woff2")
+      format("woff2"),
+    url("./../font/Fira_San_Condensed/Fira_Sans_Condensed.woff") format("woff"),
+    url("./../font/Fira_Sans_Condensed/Fira_Sans_Condensed.ttf")
+      format("truetype"),
+    url("./../font/Fira_Sans_Condensed/Fira_Sans_Condensed.svg#Fira_Sans_Condensed")
+      format("svg");
+}
+
+@font-face {
+  font-family: "Gudea";
+  src: url("./../font/Gudea/Gudea.eot");
+  src: url("./../font/Gudea/Gudea.eot?#iefix") format("embedded-opentype"),
+    url("./../font/Gudea/Gudea.woff2") format("woff2"),
+    url("./../font/Gudea/Gudea.woff") format("woff"),
+    url("./../font/Gudea/Gudea.ttf") format("truetype"),
+    url("./../font/Gudea/Gudea.svg#Gudea") format("svg");
+}
+
+@font-face {
+  font-family: "Gudea_Bold";
+  src: url("./../font/Gudea_Bold/Gudea_Bold.eot");
+  src: url("./../font/Gudea_Bold/Gudea_Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("./../font/Gudea_Bold/Gudea_Bold.woff2") format("woff2"),
+    url("./../font/Gudea_Bold/Gudea_Bold.woff") format("woff"),
+    url("./../font/Gudea_Bold/Gudea_Bold.ttf") format("truetype"),
+    url("./../font/Gudea_Bold/Gudea_Bold.svg#Gudea_Bold") format("svg");
+}
+
+:root {
+  --color1: 0, 0, 0; /* #000000 */
+  --color2: 20, 33, 61; /* #14213d */
+  --color3: 252, 163, 17; /* #fca311 */
+  --color4: 229, 229, 229; /* #e5e5e5 */
+  --color5: 255, 255, 255; /* #ffffff */
+  --titre: "Roboto";
+  --sous-titre: "Fira_Sans_Condensed";
+  --texte: "Gudea";
+  --button: "Gudea_Bold";
+}
+
+img {
+  max-width: 100%;
+}
+button,
+a {
+  cursor: pointer;
+  border: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  & a {
+    text-decoration: none;
+  }
+}
+
+body {
+  background-color: rgba(var(--color2), 0.9);
+}
+
+main {
+  background-color: rgba(var(--color2), 1);
+  color: rgba(var(--color5), 1);
+  max-width: 1920px;
+  margin: auto;
+}
