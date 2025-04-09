@@ -99,7 +99,45 @@
       </div>
     </section>
     <section id="Competences">
-      <p>Compétences</p>
+      <h2>Compétences</h2>
+      <div id="competences_container">
+        <div id="competences_langages">
+          <h3 class="titre_section">LANGAGES</h3>
+          <li>
+            <h3>HTML</h3><span class="bar"><span class="skill_html"></span></span> <!-- skill bar 1 -->
+          </li>
+
+          <li>
+            <h3>CSS</h3><span class="bar"><span class="skill_css"></span></span><!-- skill bar 2 -->
+          </li>
+
+          <li>
+            <h3>JAVASCRIPT</h3><span class="bar"><span class="skill_js"></span></span><!-- skill bar 3 -->
+          </li>
+
+          <li>
+            <h3>PHP</h3><span class="bar"><span class="skill_php"></span></span><!-- skill bar 4 -->
+          </li>
+        </div>
+        <div id="competences_logiciels">
+          <h3 class="titre_section">LOGICIELS</h3>
+          <li>
+            <h3>FIGMA</h3><span class="bar"><span class="logiciel_figma"></span></span> <!-- skill bar 1 -->
+          </li>
+
+          <li>
+            <h3>PHOTOSHOP</h3><span class="bar"><span class="logiciel_photoshop"></span></span><!-- skill bar 2 -->
+          </li>
+
+          <li>
+            <h3>ILLUSTRATOR</h3><span class="bar"><span class="logiciel_illustrator"></span></span><!-- skill bar 3 -->
+          </li>
+
+          <li>
+            <h3>DOCKER</h3><span class="bar"><span class="logiciel_docker"></span></span><!-- skill bar 4 -->
+          </li>
+        </div>
+      </div>
     </section>
     <section id="Projets">
       <p>Projets</p>

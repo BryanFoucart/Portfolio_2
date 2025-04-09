@@ -617,12 +617,153 @@ section#A_propos #container-A_propos #a_propos_right .button a button:hover {
 }
 section#Competences {
   min-height: 100vh;
+}
+section#Competences h2 {
+  font-size: 3rem;
+  text-align: center;
+  font-family: var(--titre);
+  padding-bottom: 1rem;
+}
+section#Competences #competences_container {
   display: flex;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  justify-content: space-between;
+}
+section#Competences #competences_container #competences_langages,
+section#Competences #competences_container #competences_logiciels {
+  width: 500px;
+  margin: 60px auto;
+  color: rgba(var(--color5), 1);
+  background-color: rgba(var(--color4), 0.6);
+  padding: 10px;
+  border-radius: 15px;
+}
+section#Competences #competences_container #competences_langages h3.titre_section,
+section#Competences #competences_container #competences_logiciels h3.titre_section {
+  text-align: center;
+  font-size: 2rem;
+  font-family: var(--sous-titre);
+}
+section#Competences #competences_container #competences_langages li,
+section#Competences #competences_container #competences_logiciels li {
+  margin: 20px 0;
+  list-style-type: none;
+}
+section#Competences #competences_container #competences_langages li h3,
+section#Competences #competences_container #competences_logiciels li h3 {
+  font-size: 1.5rem;
+  font-family: var(--sous-titre);
+}
+section#Competences #competences_container #competences_langages li .bar,
+section#Competences #competences_container #competences_logiciels li .bar {
+  background-color: rgba(var(--color4), 0.3);
+  display: block;
+  height: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
   overflow: hidden;
+  box-shadow: 0 0 10px rgba(33, 135, 231, 0.7019607843);
+}
+section#Competences #competences_container #competences_langages li .bar span,
+section#Competences #competences_container #competences_logiciels li .bar span {
+  height: 5px;
+  float: left;
+  background-color: rgba(var(--color2), 1);
+}
+section#Competences #competences_container div#competences_langages .skill_html {
+  width: 75%;
+  animation: skill_html 2s;
+}
+section#Competences #competences_container div#competences_langages .skill_css {
+  width: 70%;
+  animation: skill_css 2s;
+}
+section#Competences #competences_container div#competences_langages .skill_js {
+  width: 40%;
+  animation: skill_js 2s;
+}
+section#Competences #competences_container div#competences_langages .skill_php {
+  width: 30%;
+  animation: skill_php 2s;
+}
+@keyframes skill_html {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 75%;
+  }
+}
+@keyframes skill_css {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@keyframes skill_js {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 40%;
+  }
+}
+@keyframes skill_php {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 30%;
+  }
+}
+section#Competences #competences_container #competences_logiciels .logiciel_figma {
+  width: 75%;
+  animation: skill_html 2s;
+}
+section#Competences #competences_container #competences_logiciels .logiciel_photoshop {
+  width: 70%;
+  animation: skill_css 2s;
+}
+section#Competences #competences_container #competences_logiciels .logiciel_illustrator {
+  width: 40%;
+  animation: skill_js 2s;
+}
+section#Competences #competences_container #competences_logiciels .logiciel_docker {
+  width: 30%;
+  animation: skill_php 2s;
+}
+@keyframes logiciel_figma {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 75%;
+  }
+}
+@keyframes logiciel_photoshop {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@keyframes logiciel_illustrator {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 40%;
+  }
+}
+@keyframes logiciel_docker {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 30%;
+  }
 }
 
 section#Projets {
