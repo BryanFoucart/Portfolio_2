@@ -229,6 +229,7 @@ header .navbar a:hover {
 }
 header span.text {
   font-family: var(--sous-titre);
+  font-weight: 100;
 }
 
 @media screen and (max-width: 1400px) {
@@ -626,63 +627,92 @@ section#Competences h2 {
 }
 section#Competences #competences_container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 100%;
 }
-section#Competences #competences_container #competences_langages,
-section#Competences #competences_container #competences_logiciels {
-  width: 500px;
-  margin: 60px auto;
+section#Competences #competences_container .colonne_competences {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section#Competences #competences_container .colonne_competences #competences_langages,
+section#Competences #competences_container .colonne_competences #competences_logiciels,
+section#Competences #competences_container .colonne_competences #competences_frameworks,
+section#Competences #competences_container .colonne_competences #competences_autres {
+  width: 80%;
+  max-width: 600px;
+  margin: 10px auto;
   color: rgba(var(--color5), 1);
   background-color: rgba(var(--color4), 0.6);
+  border: 2px solid rgba(var(--color3), 0.8);
   padding: 10px;
   border-radius: 15px;
 }
-section#Competences #competences_container #competences_langages h3.titre_section,
-section#Competences #competences_container #competences_logiciels h3.titre_section {
+section#Competences #competences_container .colonne_competences #competences_langages h3,
+section#Competences #competences_container .colonne_competences #competences_logiciels h3,
+section#Competences #competences_container .colonne_competences #competences_frameworks h3,
+section#Competences #competences_container .colonne_competences #competences_autres h3 {
   text-align: center;
   font-size: 2rem;
   font-family: var(--sous-titre);
 }
-section#Competences #competences_container #competences_langages li,
-section#Competences #competences_container #competences_logiciels li {
+section#Competences #competences_container .colonne_competences #competences_langages li,
+section#Competences #competences_container .colonne_competences #competences_logiciels li,
+section#Competences #competences_container .colonne_competences #competences_frameworks li,
+section#Competences #competences_container .colonne_competences #competences_autres li {
   margin: 20px 0;
   list-style-type: none;
 }
-section#Competences #competences_container #competences_langages li h3,
-section#Competences #competences_container #competences_logiciels li h3 {
+section#Competences #competences_container .colonne_competences #competences_langages li div.text-left,
+section#Competences #competences_container .colonne_competences #competences_logiciels li div.text-left,
+section#Competences #competences_container .colonne_competences #competences_frameworks li div.text-left,
+section#Competences #competences_container .colonne_competences #competences_autres li div.text-left {
   font-size: 1.5rem;
-  font-family: var(--sous-titre);
+  font-family: var(--texte);
+  text-transform: uppercase;
 }
-section#Competences #competences_container #competences_langages li .bar,
-section#Competences #competences_container #competences_logiciels li .bar {
+section#Competences #competences_container .colonne_competences #competences_langages li div.text-left span.right,
+section#Competences #competences_container .colonne_competences #competences_logiciels li div.text-left span.right,
+section#Competences #competences_container .colonne_competences #competences_frameworks li div.text-left span.right,
+section#Competences #competences_container .colonne_competences #competences_autres li div.text-left span.right {
+  float: right;
+}
+section#Competences #competences_container .colonne_competences #competences_langages li span.bar,
+section#Competences #competences_container .colonne_competences #competences_logiciels li span.bar,
+section#Competences #competences_container .colonne_competences #competences_frameworks li span.bar,
+section#Competences #competences_container .colonne_competences #competences_autres li span.bar {
   background-color: rgba(var(--color4), 0.3);
   display: block;
   height: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.8);
   border-radius: 3px;
   overflow: hidden;
-  box-shadow: 0 0 10px rgba(33, 135, 231, 0.7019607843);
+  box-shadow: 0 0 10px rgba(var(--color4), 0.5);
 }
-section#Competences #competences_container #competences_langages li .bar span,
-section#Competences #competences_container #competences_logiciels li .bar span {
+section#Competences #competences_container .colonne_competences #competences_langages li span.bar span,
+section#Competences #competences_container .colonne_competences #competences_logiciels li span.bar span,
+section#Competences #competences_container .colonne_competences #competences_frameworks li span.bar span,
+section#Competences #competences_container .colonne_competences #competences_autres li span.bar span {
   height: 5px;
   float: left;
   background-color: rgba(var(--color2), 1);
 }
-section#Competences #competences_container div#competences_langages .skill_html {
+section#Competences #competences_container .colonne_competences div#competences_langages .skill_html {
   width: 75%;
   animation: skill_html 2s;
 }
-section#Competences #competences_container div#competences_langages .skill_css {
-  width: 70%;
+section#Competences #competences_container .colonne_competences div#competences_langages .skill_css {
+  width: 65%;
   animation: skill_css 2s;
 }
-section#Competences #competences_container div#competences_langages .skill_js {
+section#Competences #competences_container .colonne_competences div#competences_langages .skill_js {
   width: 40%;
   animation: skill_js 2s;
 }
-section#Competences #competences_container div#competences_langages .skill_php {
-  width: 30%;
+section#Competences #competences_container .colonne_competences div#competences_langages .skill_php {
+  width: 25%;
   animation: skill_php 2s;
 }
 @keyframes skill_html {
@@ -698,7 +728,7 @@ section#Competences #competences_container div#competences_langages .skill_php {
     width: 0%;
   }
   100% {
-    width: 70%;
+    width: 65%;
   }
 }
 @keyframes skill_js {
@@ -714,31 +744,31 @@ section#Competences #competences_container div#competences_langages .skill_php {
     width: 0%;
   }
   100% {
-    width: 30%;
+    width: 25%;
   }
 }
-section#Competences #competences_container #competences_logiciels .logiciel_figma {
-  width: 75%;
-  animation: skill_html 2s;
+section#Competences #competences_container .colonne_competences #competences_logiciels .logiciel_figma {
+  width: 15%;
+  animation: logiciel_figma 2s;
 }
-section#Competences #competences_container #competences_logiciels .logiciel_photoshop {
-  width: 70%;
-  animation: skill_css 2s;
+section#Competences #competences_container .colonne_competences #competences_logiciels .logiciel_photoshop {
+  width: 45%;
+  animation: logiciel_photoshop 2s;
 }
-section#Competences #competences_container #competences_logiciels .logiciel_illustrator {
-  width: 40%;
-  animation: skill_js 2s;
+section#Competences #competences_container .colonne_competences #competences_logiciels .logiciel_illustrator {
+  width: 20%;
+  animation: logiciel_illustrator 2s;
 }
-section#Competences #competences_container #competences_logiciels .logiciel_docker {
-  width: 30%;
-  animation: skill_php 2s;
+section#Competences #competences_container .colonne_competences #competences_logiciels .logiciel_docker {
+  width: 25%;
+  animation: logiciel_docker 2s;
 }
 @keyframes logiciel_figma {
   0% {
     width: 0%;
   }
   100% {
-    width: 75%;
+    width: 15%;
   }
 }
 @keyframes logiciel_photoshop {
@@ -746,7 +776,7 @@ section#Competences #competences_container #competences_logiciels .logiciel_dock
     width: 0%;
   }
   100% {
-    width: 70%;
+    width: 45%;
   }
 }
 @keyframes logiciel_illustrator {
@@ -754,7 +784,7 @@ section#Competences #competences_container #competences_logiciels .logiciel_dock
     width: 0%;
   }
   100% {
-    width: 40%;
+    width: 20%;
   }
 }
 @keyframes logiciel_docker {
@@ -762,10 +792,192 @@ section#Competences #competences_container #competences_logiciels .logiciel_dock
     width: 0%;
   }
   100% {
-    width: 30%;
+    width: 25%;
+  }
+}
+section#Competences #competences_container .colonne_competences #competences_frameworks .framework_bootstrap {
+  width: 5%;
+  animation: framework_bootstrap 2s;
+}
+section#Competences #competences_container .colonne_competences #competences_frameworks .framework_tailwind {
+  width: 10%;
+  animation: framework_tailwind 2s;
+}
+section#Competences #competences_container .colonne_competences #competences_frameworks .framework_react {
+  width: 2%;
+  animation: framework_react 2s;
+}
+section#Competences #competences_container .colonne_competences #competences_frameworks .framework_symfoni {
+  width: 1%;
+  animation: framework_symfoni 2s;
+}
+@keyframes framework_bootstrap {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 5%;
+  }
+}
+@keyframes framework_tailwind {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 10%;
+  }
+}
+@keyframes framework_react {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 2%;
+  }
+}
+@keyframes framework_symfoni {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 1%;
+  }
+}
+section#Competences #competences_container .colonne_competences #competences_autres .autre_anglais {
+  width: 45%;
+  animation: autre_anglais 2s;
+}
+section#Competences #competences_container .colonne_competences #competences_autres .autre_github {
+  width: 40%;
+  animation: autre_github 2s;
+}
+section#Competences #competences_container .colonne_competences #competences_autres .autre_postman {
+  width: 15%;
+  animation: autre_postman 2s;
+}
+section#Competences #competences_container .colonne_competences #competences_autres .autre_visual_studio_code {
+  width: 40%;
+  animation: autre_visual_studio_code 2s;
+}
+@keyframes autre_anglais {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 45%;
+  }
+}
+@keyframes autre_github {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 40%;
+  }
+}
+@keyframes autre_postman {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 15%;
+  }
+}
+@keyframes autre_visual_studio_code {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 40%;
   }
 }
 
+@media only screen and (max-width: 1400px) {
+  section#Competences #competences_container .colonne_competences #competences_langages,
+  section#Competences #competences_container .colonne_competences #competences_logiciels,
+  section#Competences #competences_container .colonne_competences #competences_frameworks,
+  section#Competences #competences_container .colonne_competences #competences_autres {
+    max-width: 550px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  section#Competences h2 {
+    font-size: 2.7rem;
+  }
+  section#Competences #competences_container .colonne_competences #competences_langages h3,
+  section#Competences #competences_container .colonne_competences #competences_logiciels h3,
+  section#Competences #competences_container .colonne_competences #competences_frameworks h3,
+  section#Competences #competences_container .colonne_competences #competences_autres h3 {
+    font-size: 1.8rem;
+  }
+  section#Competences #competences_container .colonne_competences #competences_langages li div.text-left,
+  section#Competences #competences_container .colonne_competences #competences_logiciels li div.text-left,
+  section#Competences #competences_container .colonne_competences #competences_frameworks li div.text-left,
+  section#Competences #competences_container .colonne_competences #competences_autres li div.text-left {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 992px) {
+  section#Competences h2 {
+    font-size: 2.5rem;
+  }
+  section#Competences #competences_container .colonne_competences #competences_langages h3,
+  section#Competences #competences_container .colonne_competences #competences_logiciels h3,
+  section#Competences #competences_container .colonne_competences #competences_frameworks h3,
+  section#Competences #competences_container .colonne_competences #competences_autres h3 {
+    font-size: 1.6rem;
+  }
+  section#Competences #competences_container .colonne_competences #competences_langages li div.text-left,
+  section#Competences #competences_container .colonne_competences #competences_logiciels li div.text-left,
+  section#Competences #competences_container .colonne_competences #competences_frameworks li div.text-left,
+  section#Competences #competences_container .colonne_competences #competences_autres li div.text-left {
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  section#Competences h2 {
+    font-size: 2.3rem;
+  }
+  section#Competences #competences_container .colonne_competences {
+    width: 100%;
+    max-width: 100%;
+  }
+  section#Competences #competences_container .colonne_competences #competences_langages,
+  section#Competences #competences_container .colonne_competences #competences_logiciels,
+  section#Competences #competences_container .colonne_competences #competences_frameworks,
+  section#Competences #competences_container .colonne_competences #competences_autres {
+    max-width: 450px;
+  }
+  section#Competences #competences_container .colonne_competences #competences_langages h3,
+  section#Competences #competences_container .colonne_competences #competences_logiciels h3,
+  section#Competences #competences_container .colonne_competences #competences_frameworks h3,
+  section#Competences #competences_container .colonne_competences #competences_autres h3 {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (max-width: 544px) {
+  section#Competences h2 {
+    font-size: 2rem;
+  }
+  section#Competences #competences_container .colonne_competences #competences_langages,
+  section#Competences #competences_container .colonne_competences #competences_logiciels,
+  section#Competences #competences_container .colonne_competences #competences_frameworks,
+  section#Competences #competences_container .colonne_competences #competences_autres {
+    width: 75%;
+  }
+  section#Competences #competences_container .colonne_competences #competences_langages h3,
+  section#Competences #competences_container .colonne_competences #competences_logiciels h3,
+  section#Competences #competences_container .colonne_competences #competences_frameworks h3,
+  section#Competences #competences_container .colonne_competences #competences_autres h3 {
+    font-size: 1.3rem;
+  }
+  section#Competences #competences_container .colonne_competences #competences_langages li div.text-left,
+  section#Competences #competences_container .colonne_competences #competences_logiciels li div.text-left,
+  section#Competences #competences_container .colonne_competences #competences_frameworks li div.text-left,
+  section#Competences #competences_container .colonne_competences #competences_autres li div.text-left {
+    font-size: 1rem;
+  }
+}
 section#Projets {
   max-width: calc(100vw - 125px);
   margin: auto;

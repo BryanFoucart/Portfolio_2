@@ -29,10 +29,65 @@ window.addEventListener("resize", () => {
   // Mettre à jour le padding-top à chaque redimensionnement de la fenêtre
   adjustSectionPadding();
 });
+// Fonction - compétences
+
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const bars = entry.target.querySelectorAll("span.bar span");
+          bars.forEach((bar) => {
+            const skillClass = bar.dataset.skill;
+            bar.classList.add(skillClass);
+          });
+          observer.unobserve(entry.target); // Une seule animation par scroll
+        }
+      });
+    },
+    {
+      threshold: 0.3, // 30% de visibilité
+    }
+  );
+
+  const section = document.querySelector("#Competences");
+  if (section) observer.observe(section);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const competenceLinks = document.querySelectorAll('a[href="#Competences"]');
+  const competenceSection = document.querySelector("#Competences");
+
+  const resetAndAnimateSkills = () => {
+    const bars = competenceSection.querySelectorAll("span.bar span");
+
+    bars.forEach((bar) => {
+      const skillClass = bar.dataset.skill;
+
+      // Supprime la classe pour réinitialiser la largeur
+      bar.classList.remove(skillClass);
+
+      // Forcer un reflow pour que le retrait soit pris en compte
+      void bar.offsetWidth;
+
+      // Reappliquer la classe après un petit délai (pour relancer l'animation)
+      setTimeout(() => {
+        bar.classList.add(skillClass);
+      }, 100); // petit délai suffisant pour rejouer l'animation
+    });
+  };
+
+  competenceLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      // On utilise setTimeout pour attendre que le scroll ait lieu
+      setTimeout(() => {
+        resetAndAnimateSkills();
+      }, 500); // Ajuste si nécessaire selon la vitesse du scroll
+    });
+  });
+});
 
 // Fonction - Projets
-
-// galerie.js
 
 // Simule une liste d'images PNG dans le dossier /images/
 const dossierImages = "./Projets/";

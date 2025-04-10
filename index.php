@@ -1,20 +1,30 @@
+<?php
+require_once __DIR__ . "/vendor/autoload.php";
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+$MAIL = $_ENV["MAIL"] ?? "email@example.com";
+$TEL = $_ENV["TEL"] ?? "+33754584454";
+$MAPS = $_ENV["MAPS"] ?? "PARIS,FR";
+$ADRESSE = $_ENV["ADRESSE"] ?? "Google Maps Adresse";
+$IDENTITE = $_ENV["IDENTITE"] ?? "Pierre Dupont";
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio de Bryan Foucart, développeur web junior" />
-  <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet" /> -->
-  <link
+  <meta name="description" content="Portfolio de <?php echo htmlspecialchars($IDENTITE); ?>, développeur web junior" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <!-- <link
     rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" /> -->
   <link rel="stylesheet" href="./assets/styles/style.css" />
   <script type="module" src="./script.js"></script>
+
   <title>Mon Portfolio</title>
 </head>
 
@@ -23,20 +33,20 @@
     <nav class="navbar">
       <ul>
         <li>
-          <a href="#Accueil"><i class="fa fa-home" title="Accueil">
+          <a href="#Accueil"><i class="fas fa-home" title="Accueil">
               <span class="text"> Accueil</span></i></a>
         </li>
         <li>
-          <a href="#A_propos" title="A Propos"><i class="fa fa-user"><span class="text"> A propos</span></i></a>
+          <a href="#A_propos" title="A Propos"><i class="fas fa-user"><span class="text"> A propos</span></i></a>
         </li>
         <li>
-          <a href="#Competences"><i class="fa fa-code" title="Compétences"><span class="text"> Compétences</span></i></a>
+          <a href="#Competences"><i class="fas fa-code" title="Compétences"><span class="text"> Compétences</span></i></a>
         </li>
         <li>
-          <a href="#Projets"><i class="fa fa-briefcase" title="Projets"><span class="text"> Projets</span></i></a>
+          <a href="#Projets"><i class="fas fa-briefcase" title="Projets"><span class="text"> Projets</span></i></a>
         </li>
         <li>
-          <a href="#Contact"><i class="fa fa-envelope" title="Contact"><span class="text"> Contact</span></i></a>
+          <a href="#Contact"><i class="fas fa-envelope" title="Contact"><span class="text"> Contact</span></i></a>
         </li>
       </ul>
     </nav>
@@ -45,9 +55,9 @@
     <section id="Accueil">
       <div id="hero">
         <h1>
-          Bryan Foucart
+          <?php echo htmlspecialchars($IDENTITE); ?>
         </h1>
-        <img src="./Sans titre-1.jpg" alt="Bryan Foucart" />
+        <img src="./Sans titre-1.jpg" alt="<?php echo htmlspecialchars($IDENTITE); ?>" />
         <h2>Développeur Web</h2>
       </div>
       <div id="bienvenue">
@@ -62,9 +72,9 @@
       <h2>A propos de moi</h2>
       <div id="container-A_propos">
         <div id="a_propos_left">
-          <img src="./Sans titre-1.jpg" alt="Bryan Foucart" />
+          <img src="./Sans titre-1.jpg" alt="<?php echo htmlspecialchars($IDENTITE); ?>" />
           <p>
-            Je m'appelle Bryan Foucart et je suis développeur web junior. Je suis passionné par le développement web et je suis actuellement en formation chez l'AFCI d'Arras. Je suis à la recherche d'une entreprise pour débuter ma carrière.
+            Je m'appelle <?php echo htmlspecialchars($IDENTITE); ?> et je suis développeur web junior. Je suis passionné par le développement web et je suis actuellement en formation chez l'AFCI d'Arras. Je suis à la recherche d'une entreprise pour débuter ma carrière.
           </p>
         </div>
         <div id="a_propos_right">
@@ -101,41 +111,82 @@
     <section id="Competences">
       <h2>Compétences</h2>
       <div id="competences_container">
-        <div id="competences_langages">
-          <h3 class="titre_section">LANGAGES</h3>
-          <li>
-            <h3>HTML</h3><span class="bar"><span class="skill_html"></span></span> <!-- skill bar 1 -->
-          </li>
+        <div class="colonne_competences">
 
-          <li>
-            <h3>CSS</h3><span class="bar"><span class="skill_css"></span></span><!-- skill bar 2 -->
-          </li>
+          <div id="competences_langages">
+            <h3 class="titre_section">LANGAGES</h3>
+            <li>
+              <div class="text-left">html<span class="right">75%</span></div><span class="bar"><span data-skill="skill_html"></span></span> <!-- skill bar 1 -->
+            </li>
 
-          <li>
-            <h3>JAVASCRIPT</h3><span class="bar"><span class="skill_js"></span></span><!-- skill bar 3 -->
-          </li>
+            <li>
+              <div class="text-left">css<span class="right">65%</span></div><span class="bar"><span data-skill="skill_css"></span></span><!-- skill bar 2 -->
+            </li>
 
-          <li>
-            <h3>PHP</h3><span class="bar"><span class="skill_php"></span></span><!-- skill bar 4 -->
-          </li>
+            <li>
+              <div class="text-left">javascript<span class="right">40%</span></div><span class="bar"><span data-skill="skill_js"></span></span><!-- skill bar 3 -->
+            </li>
+
+            <li>
+              <div class="text-left">php<span class="right">25%</span></div><span class="bar"><span data-skill="skill_php"></span></span><!-- skill bar 4 -->
+            </li>
+          </div>
+          <div id="competences_logiciels">
+            <h3 class="titre_section">LOGICIELS</h3>
+            <li>
+              <div class="text-left">figma<span class="right">15%</span></div><span class="bar"><span data-skill="logiciel_figma"></span></span> <!-- skill bar 1 -->
+            </li>
+
+            <li>
+              <div class="text-left">photoshop<span class="right">45%</span></div><span class="bar"><span data-skill="logiciel_photoshop"></span></span><!-- skill bar 2 -->
+            </li>
+
+            <li>
+              <div class="text-left">illustrator<span class="right">20%</span></div><span class="bar"><span data-skill="logiciel_illustrator"></span></span><!-- skill bar 3 -->
+            </li>
+
+            <li>
+              <div class="text-left">docker<span class="right">25%</span></div><span class="bar"><span data-skill="logiciel_docker"></span></span><!-- skill bar 4 -->
+            </li>
+          </div>
         </div>
-        <div id="competences_logiciels">
-          <h3 class="titre_section">LOGICIELS</h3>
-          <li>
-            <h3>FIGMA</h3><span class="bar"><span class="logiciel_figma"></span></span> <!-- skill bar 1 -->
-          </li>
+        <div class="colonne_competences">
+          <div id="competences_frameworks">
+            <h3 class="titre_section">FRAMEWORKS</h3>
+            <li>
+              <div class="text-left">bootstrap<span class="right">5%</span></div><span class="bar"><span data-skill="framework_bootstrap"></span></span> <!-- skill bar 1 -->
+            </li>
 
-          <li>
-            <h3>PHOTOSHOP</h3><span class="bar"><span class="logiciel_photoshop"></span></span><!-- skill bar 2 -->
-          </li>
+            <li>
+              <div class="text-left">tailwind<span class="right">10%</span></div><span class="bar"><span data-skill="framework_tailwind"></span></span><!-- skill bar 2 -->
+            </li>
 
-          <li>
-            <h3>ILLUSTRATOR</h3><span class="bar"><span class="logiciel_illustrator"></span></span><!-- skill bar 3 -->
-          </li>
+            <li>
+              <div class="text-left">react<span class="right">2%</span></div><span class="bar"><span data-skill="framework_react"></span></span><!-- skill bar 3 -->
+            </li>
 
-          <li>
-            <h3>DOCKER</h3><span class="bar"><span class="logiciel_docker"></span></span><!-- skill bar 4 -->
-          </li>
+            <li>
+              <div class="text-left">symfony<span class="right">1%</span></div><span class="bar"><span data-skill="framework_symfoni"></span></span><!-- skill bar 4 -->
+            </li>
+          </div>
+          <div id="competences_autres">
+            <h3 class="titre_section">AUTRES</h3>
+            <li>
+              <div class="text-left">anglais<span class="right">45%</span></div><span class="bar"><span data-skill="autre_anglais"></span></span> <!-- skill bar 1 -->
+            </li>
+
+            <li>
+              <div class="text-left">github<span class="right">40%</span></div><span class="bar"><span data-skill="autre_github"></span></span><!-- skill bar 2 -->
+            </li>
+
+            <li>
+              <div class="text-left">postman<span class="right">15%</span></div><span class="bar"><span data-skill="autre_postman"></span></span><!-- skill bar 3 -->
+            </li>
+
+            <li>
+              <div class="text-left">visual studio code<span class="right">40%</span></div><span class="bar"><span data-skill="autre_visual_studio_code"></span></span><!-- skill bar 4 -->
+            </li>
+          </div>
         </div>
       </div>
     </section>
@@ -143,9 +194,14 @@
       <p>Projets</p>
     </section>
     <section id="Contact">
-      <p>Contact</p>
+
+      <span><i class="fas fa-map-location-dot"></i> <?php echo htmlspecialchars($MAPS); ?></span>
+      <span><i class="fas fa-mobile-screen"></i> <?php echo htmlspecialchars($TEL); ?></span>
+      <span><i class="fas fa-at"></i> <?php echo htmlspecialchars($MAIL); ?></span>
+      <iframe src="<?php echo htmlspecialchars($ADRESSE); ?>" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
   </main>
+  <footer></footer>
 </body>
 
 </html>
