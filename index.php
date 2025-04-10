@@ -115,77 +115,85 @@ $IDENTITE = $_ENV["IDENTITE"] ?? "Pierre Dupont";
 
           <div id="competences_langages">
             <h3 class="titre_section">LANGAGES</h3>
-            <li>
-              <div class="text-left">html<span class="right">75%</span></div><span class="bar"><span data-skill="skill_html"></span></span> <!-- skill bar 1 -->
-            </li>
+            <ul>
+              <li>
+                <div class="text-left">html<span class="right">75%</span></div><span class="bar"><span data-skill="skill_html"></span></span> <!-- skill bar 1 -->
+              </li>
 
-            <li>
-              <div class="text-left">css<span class="right">65%</span></div><span class="bar"><span data-skill="skill_css"></span></span><!-- skill bar 2 -->
-            </li>
+              <li>
+                <div class="text-left">css<span class="right">65%</span></div><span class="bar"><span data-skill="skill_css"></span></span><!-- skill bar 2 -->
+              </li>
 
-            <li>
-              <div class="text-left">javascript<span class="right">40%</span></div><span class="bar"><span data-skill="skill_js"></span></span><!-- skill bar 3 -->
-            </li>
+              <li>
+                <div class="text-left">javascript<span class="right">40%</span></div><span class="bar"><span data-skill="skill_js"></span></span><!-- skill bar 3 -->
+              </li>
 
-            <li>
-              <div class="text-left">php<span class="right">25%</span></div><span class="bar"><span data-skill="skill_php"></span></span><!-- skill bar 4 -->
-            </li>
+              <li>
+                <div class="text-left">php<span class="right">25%</span></div><span class="bar"><span data-skill="skill_php"></span></span><!-- skill bar 4 -->
+              </li>
+            </ul>
           </div>
           <div id="competences_logiciels">
             <h3 class="titre_section">LOGICIELS</h3>
-            <li>
-              <div class="text-left">figma<span class="right">15%</span></div><span class="bar"><span data-skill="logiciel_figma"></span></span> <!-- skill bar 1 -->
-            </li>
+            <ul>
+              <li>
+                <div class="text-left">figma<span class="right">15%</span></div><span class="bar"><span data-skill="logiciel_figma"></span></span> <!-- skill bar 1 -->
+              </li>
 
-            <li>
-              <div class="text-left">photoshop<span class="right">45%</span></div><span class="bar"><span data-skill="logiciel_photoshop"></span></span><!-- skill bar 2 -->
-            </li>
+              <li>
+                <div class="text-left">photoshop<span class="right">45%</span></div><span class="bar"><span data-skill="logiciel_photoshop"></span></span><!-- skill bar 2 -->
+              </li>
 
-            <li>
-              <div class="text-left">illustrator<span class="right">20%</span></div><span class="bar"><span data-skill="logiciel_illustrator"></span></span><!-- skill bar 3 -->
-            </li>
+              <li>
+                <div class="text-left">illustrator<span class="right">20%</span></div><span class="bar"><span data-skill="logiciel_illustrator"></span></span><!-- skill bar 3 -->
+              </li>
 
-            <li>
-              <div class="text-left">docker<span class="right">25%</span></div><span class="bar"><span data-skill="logiciel_docker"></span></span><!-- skill bar 4 -->
-            </li>
+              <li>
+                <div class="text-left">docker<span class="right">25%</span></div><span class="bar"><span data-skill="logiciel_docker"></span></span><!-- skill bar 4 -->
+              </li>
+            </ul>
           </div>
         </div>
         <div class="colonne_competences">
           <div id="competences_frameworks">
             <h3 class="titre_section">FRAMEWORKS</h3>
-            <li>
-              <div class="text-left">bootstrap<span class="right">5%</span></div><span class="bar"><span data-skill="framework_bootstrap"></span></span> <!-- skill bar 1 -->
-            </li>
+            <ul>
+              <li>
+                <div class="text-left">bootstrap<span class="right">5%</span></div><span class="bar"><span data-skill="framework_bootstrap"></span></span> <!-- skill bar 1 -->
+              </li>
 
-            <li>
-              <div class="text-left">tailwind<span class="right">10%</span></div><span class="bar"><span data-skill="framework_tailwind"></span></span><!-- skill bar 2 -->
-            </li>
+              <li>
+                <div class="text-left">tailwind<span class="right">10%</span></div><span class="bar"><span data-skill="framework_tailwind"></span></span><!-- skill bar 2 -->
+              </li>
 
-            <li>
-              <div class="text-left">react<span class="right">2%</span></div><span class="bar"><span data-skill="framework_react"></span></span><!-- skill bar 3 -->
-            </li>
+              <li>
+                <div class="text-left">react<span class="right">2%</span></div><span class="bar"><span data-skill="framework_react"></span></span><!-- skill bar 3 -->
+              </li>
 
-            <li>
-              <div class="text-left">symfony<span class="right">1%</span></div><span class="bar"><span data-skill="framework_symfoni"></span></span><!-- skill bar 4 -->
-            </li>
+              <li>
+                <div class="text-left">symfony<span class="right">1%</span></div><span class="bar"><span data-skill="framework_symfoni"></span></span><!-- skill bar 4 -->
+              </li>
+            </ul>
           </div>
           <div id="competences_autres">
             <h3 class="titre_section">AUTRES</h3>
-            <li>
-              <div class="text-left">anglais<span class="right">45%</span></div><span class="bar"><span data-skill="autre_anglais"></span></span> <!-- skill bar 1 -->
-            </li>
+            <ul>
+              <li>
+                <div class="text-left">anglais<span class="right">45%</span></div><span class="bar"><span data-skill="autre_anglais"></span></span> <!-- skill bar 1 -->
+              </li>
 
-            <li>
-              <div class="text-left">github<span class="right">40%</span></div><span class="bar"><span data-skill="autre_github"></span></span><!-- skill bar 2 -->
-            </li>
+              <li>
+                <div class="text-left">github<span class="right">40%</span></div><span class="bar"><span data-skill="autre_github"></span></span><!-- skill bar 2 -->
+              </li>
 
-            <li>
-              <div class="text-left">postman<span class="right">15%</span></div><span class="bar"><span data-skill="autre_postman"></span></span><!-- skill bar 3 -->
-            </li>
+              <li>
+                <div class="text-left">postman<span class="right">15%</span></div><span class="bar"><span data-skill="autre_postman"></span></span><!-- skill bar 3 -->
+              </li>
 
-            <li>
-              <div class="text-left">visual studio code<span class="right">40%</span></div><span class="bar"><span data-skill="autre_visual_studio_code"></span></span><!-- skill bar 4 -->
-            </li>
+              <li>
+                <div class="text-left">visual studio code<span class="right">40%</span></div><span class="bar"><span data-skill="autre_visual_studio_code"></span></span><!-- skill bar 4 -->
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -194,6 +202,20 @@ $IDENTITE = $_ENV["IDENTITE"] ?? "Pierre Dupont";
       <p>Projets</p>
     </section>
     <section id="Contact">
+
+      <h1>Formulaire de contact</h1>
+      <form action="send.php" method="POST">
+        <label for="name">Nom :</label>
+        <input type="text" name="name" required><br>
+
+        <label for="email">Email :</label>
+        <input type="email" name="email" required><br>
+
+        <label for="message">Message :</label>
+        <textarea name="message" rows="5" required></textarea><br>
+
+        <button type="submit">Envoyer</button>
+      </form>
 
       <span><i class="fas fa-map-location-dot"></i> <?php echo htmlspecialchars($MAPS); ?></span>
       <span><i class="fas fa-mobile-screen"></i> <?php echo htmlspecialchars($TEL); ?></span>
