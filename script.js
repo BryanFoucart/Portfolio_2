@@ -408,3 +408,45 @@ lightboxImg.addEventListener(
 lightboxImg.addEventListener("touchend", () => {
   canDrag = false;
 });
+
+// Contact
+// Formulaire
+
+document
+  .getElementById("contactForm")
+  .addEventListener("submit", async function (e) {
+    e.preventDefault(); // Empêche l'envoi classique
+
+    const form = e.target;
+    const formData = new FormData(form);
+    const responseDiv = document.getElementById("Response_Message");
+
+    responseDiv.style.display = "block";
+    setTimeout(() => {
+      responseDiv.style.display = "none";
+    }, 15000);
+
+    // Affiche un message de chargement
+    responseDiv.innerHTML = "⏳ Envoi en cours...";
+
+    try {
+      const response = await fetch("send.php", {
+        method: "POST",
+        body: formData,
+      });
+
+      const result = await response.text();
+
+      if (!response.ok) {
+        // Si le statut HTTP n'est pas bon (ex: 500 erreur serveur)
+        throw new Error("Erreur serveur : " + response.status);
+      }
+
+      // Affiche le retour du serveur (succès ou message personnalisé)
+      responseDiv.innerHTML = `<span>${result}</span>`;
+      form.reset(); // Réinitialise le formulaire
+    } catch (error) {
+      // En cas d'erreur réseau ou PHP qui crash
+      responseDiv.innerHTML = `<span>❌ Une erreur est survenue lors de l'envoi : ${error.message}</span>`;
+    }
+  });

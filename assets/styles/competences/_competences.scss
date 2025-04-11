@@ -3,8 +3,17 @@ section#Competences {
   & h2 {
     font-size: 3rem;
     text-align: center;
+    padding-top: 1rem;
     font-family: var(--titre);
-    padding-bottom: 1rem;
+  }
+
+  & hr {
+    width: 20%;
+    padding: 1px;
+    margin: 1rem auto;
+    background-color: rgba(var(--color3, 0.7));
+    border: 1px solid rgba(var(--color2, 1));
+    border-radius: 15px;
   }
 
   & #competences_container {

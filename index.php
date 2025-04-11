@@ -22,6 +22,12 @@ $IDENTITE = $_ENV["IDENTITE"] ?? "Pierre Dupont";
   <!-- <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" /> -->
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+  <link rel="shortcut icon" href="/assets/favicons/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+  <link rel="manifest" href="/assets/favicons/site.webmanifest" />
   <link rel="stylesheet" href="./assets/styles/style.css" />
   <script type="module" src="./script.js"></script>
 
@@ -70,6 +76,7 @@ $IDENTITE = $_ENV["IDENTITE"] ?? "Pierre Dupont";
     </section>
     <section id="A_propos">
       <h2>A propos de moi</h2>
+      <hr>
       <div id="container-A_propos">
         <div id="a_propos_left">
           <img src="./Sans titre-1.jpg" alt="<?php echo htmlspecialchars($IDENTITE); ?>" />
@@ -110,6 +117,7 @@ $IDENTITE = $_ENV["IDENTITE"] ?? "Pierre Dupont";
     </section>
     <section id="Competences">
       <h2>Compétences</h2>
+      <hr>
       <div id="competences_container">
         <div class="colonne_competences">
 
@@ -199,31 +207,57 @@ $IDENTITE = $_ENV["IDENTITE"] ?? "Pierre Dupont";
       </div>
     </section>
     <section id="Projets">
-      <p>Projets</p>
+      <h2>Projets</h2>
+      <hr>
     </section>
     <section id="Contact">
 
-      <h1>Formulaire de contact</h1>
-      <form action="send.php" method="POST">
-        <label for="name">Nom :</label>
-        <input type="text" name="name" required><br>
+      <h2>Contact</h2>
+      <hr>
+      <div id="contact_container">
+        <div id="Formulaire">
+          <h3>Formulaire de contact</h3>
+          <form id="contactForm" action="send.php" method="POST">
+            <label for="name">Nom :</label>
+            <input type="text" name="name" required>
 
-        <label for="email">Email :</label>
-        <input type="email" name="email" required><br>
+            <label for="email">Email :</label>
+            <input type="email" name="email" required>
 
-        <label for="message">Message :</label>
-        <textarea name="message" rows="5" required></textarea><br>
+            <label for="subject">Sujet :</label>
+            <input type="text" name="subject" required>
 
-        <button type="submit">Envoyer</button>
-      </form>
+            <label for="message">Message :</label>
+            <textarea name="message" rows="10" required></textarea>
 
-      <span><i class="fas fa-map-location-dot"></i> <?php echo htmlspecialchars($MAPS); ?></span>
-      <span><i class="fas fa-mobile-screen"></i> <?php echo htmlspecialchars($TEL); ?></span>
-      <span><i class="fas fa-at"></i> <?php echo htmlspecialchars($MAIL); ?></span>
-      <iframe src="<?php echo htmlspecialchars($ADRESSE); ?>" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <button type="submit">Envoyer</button>
+          </form>
+          <div id="Response_Message"></div>
+        </div>
+
+        <div id="Informations">
+          <ul>
+            <li><i class="fas fa-map-location-dot"></i><span><?php echo htmlspecialchars($MAPS); ?></span></li>
+            <li><i class="fas fa-mobile-screen"></i><span> <?php echo htmlspecialchars($TEL); ?></span></li>
+            <li>
+              <i class="fas fa-at"></i><span><?php echo htmlspecialchars($MAIL); ?></span>
+            </li>
+          </ul>
+          <iframe src="<?php echo htmlspecialchars($ADRESSE); ?>" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
     </section>
   </main>
-  <footer></footer>
+  <footer id="footer">
+    <div id="copyright"><i class="fa-regular fa-copyright"></i><span>Portfolio - Bryan Foucart</span></div>
+    <ul id="reseaux">
+      <li><a href="https://fr-fr.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+      <li><a href="https://fr.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+      <li><a href="https://github.com/" target="_blank"><i class="fab fa-github-square"></i></a></li>
+      <li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram-square"></i></a></li>
+      <li><a href="https://x.com/?lang=fr" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a></li>
+    </ul>
+  </footer>
 </body>
 
 </html>

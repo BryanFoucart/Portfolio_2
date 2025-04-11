@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="1000" height="1000"><style>
+    #light-icon {
+      display: inline;
+    }
+    #dark-icon {
+      display: none;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      #light-icon {
+        display: none;
+      }
+      #dark-icon {
+        display: inline;
+      }
+    }
+  </style><g id="light-icon"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="1000" height="1000"><g><g transform="matrix(16.89189189189189,0,0,16.89189189189189,153.46283783783787,0)"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="41.03" height="59.2"><svg id="Calque_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.03 59.2">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #13213c;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M.5,1.54C3.27.94,7.6.5,11.95.5c6.29,0,10.31,1.06,13.32,3.52,2.51,1.9,4.06,4.79,4.06,8.59,0,4.69-3.13,8.82-8.21,10.63v.19c4.62,1.11,10.02,4.92,10.02,12.18,0,4.14-1.65,7.35-4.15,9.67-3.34,3.14-8.8,4.56-16.75,4.56-4.35,0-7.63-.3-9.73-.54V1.54ZM6.76,21.43h5.74c6.56,0,10.45-3.49,10.45-8.2,0-5.63-4.26-7.9-10.61-7.9-2.91,0-4.56.21-5.58.45v15.65ZM6.76,44.64c1.28.26,3.01.32,5.28.32,6.51,0,12.49-2.38,12.49-9.44,0-6.6-5.71-9.36-12.56-9.38h-5.22v18.5Z"></path>
+  <path class="cls-1" d="M15.84,12.88h24.68v4.93h-18.73v15.26h17.31v4.9h-17.31v20.74h-5.95V12.88Z"></path>
+</svg></svg></g></g></svg></g><g id="dark-icon"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="1000" height="1000"><g clip-path="url(#SvgjsClipPath1044)"><rect width="1000" height="1000" fill="#ffffff"></rect><g transform="matrix(13.513513513513512,0,0,13.513513513513512,222.77027027027032,100)"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="41.03" height="59.2"><svg id="Calque_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.03 59.2">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #13213c;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  <clipPath id="SvgjsClipPath1044"><rect width="1000" height="1000" x="0" y="0" rx="500" ry="500"></rect></clipPath></defs>
+  <path class="cls-1" d="M.5,1.54C3.27.94,7.6.5,11.95.5c6.29,0,10.31,1.06,13.32,3.52,2.51,1.9,4.06,4.79,4.06,8.59,0,4.69-3.13,8.82-8.21,10.63v.19c4.62,1.11,10.02,4.92,10.02,12.18,0,4.14-1.65,7.35-4.15,9.67-3.34,3.14-8.8,4.56-16.75,4.56-4.35,0-7.63-.3-9.73-.54V1.54ZM6.76,21.43h5.74c6.56,0,10.45-3.49,10.45-8.2,0-5.63-4.26-7.9-10.61-7.9-2.91,0-4.56.21-5.58.45v15.65ZM6.76,44.64c1.28.26,3.01.32,5.28.32,6.51,0,12.49-2.38,12.49-9.44,0-6.6-5.71-9.36-12.56-9.38h-5.22v18.5Z"></path>
+  <path class="cls-1" d="M15.84,12.88h24.68v4.93h-18.73v15.26h17.31v4.9h-17.31v20.74h-5.95V12.88Z"></path>
+</svg></svg></g></g></svg></g></svg>

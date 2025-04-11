@@ -13,6 +13,7 @@ $dotenv->load();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = htmlspecialchars($_POST['name']);
     $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+    $subject = htmlspecialchars($_POST['subject']);
     $message = htmlspecialchars($_POST['message']);
 
     if (!$email) {
@@ -20,15 +21,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     $mail = new PHPMailer(true);
+
     try {
         // Config SMTP
         $mail->isSMTP();
-        $mail->Host = 'smtp-relay.sendinblue.com';
+        $mail->Host = $_ENV['SMTP_HOST'];
         $mail->SMTPAuth = true;
+        $mail->Port = $_ENV['SMTP_PORT'];
         $mail->Username = $_ENV['SMTP_USER'];
         $mail->Password = $_ENV['SMTP_PASS'];
-        $mail->SMTPSecure = 'tls';
-        $mail->Port = 587;
+        $mail->SMTPSecure = $_ENV['SMTP_SECURE'];
 
         // Destinataires
         $mail->setFrom($_ENV['MAIL'], 'Formulaire Contact');
@@ -36,16 +38,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Contenu
         $mail->isHTML(true);
-        $mail->Subject = "Nouveau message de $name";
-        $mail->Body = "<p><strong>Nom:</strong> $name</p>
-                   <p><strong>Email:</strong> $email</p>
-                   <p><strong>Message:</strong><br>$message</p>";
+        $mail->Subject = "$subject";
+        $mail->Body =
+            "<p><strong>De la part de :</strong> $name</p>
+            <p><strong>Email:</strong> $email</p>
+            <p><strong>Message:</strong><br>$message</p>";
 
         $mail->send();
         echo "Message envoyé avec succès.";
     } catch (Exception $e) {
-        echo "Erreur : {$mail->ErrorInfo}";
+        echo "Echec d'envoi du formulaire.";
     }
 } else {
-    echo "Formulaire non soumis.";
+    // echo "Formulaire non soumis.";
 }
