@@ -94,13 +94,11 @@ const dossierImages = "./Projets/";
 const listeImages = [
   "Accueil.png",
   "Galerie.png",
-  "Galerie - Mobile.png",
   "Crypto.png",
   "Crypto - Light.png",
   "Carrousel.png",
   "Lightbox.png",
   "Contact.png",
-  "Navbar.png",
   "Moineau.png",
 ];
 

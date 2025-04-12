@@ -427,7 +427,7 @@ section#Accueil a:hover {
   }
 }
 section#A_propos {
-  min-height: 100vh;
+  min-height: 80vh;
 }
 section#A_propos h2 {
   font-size: 3rem;
@@ -624,7 +624,7 @@ section#A_propos #container-A_propos #a_propos_right .button a button:hover {
   }
 }
 section#Competences {
-  min-height: 100vh;
+  min-height: 80vh;
 }
 section#Competences h2 {
   font-size: 3rem;
@@ -994,8 +994,7 @@ section#Competences #competences_container .colonne_competences #competences_aut
   }
 }
 section#Projets {
-  max-width: calc(100vw - 125px);
-  margin: auto;
+  min-height: 80vh;
 }
 section#Projets h2 {
   font-size: 3rem;
@@ -1011,30 +1010,126 @@ section#Projets hr {
   border: 1px solid rgba(var(--color2, 1));
   border-radius: 15px;
 }
-
-ul.galerie-grid {
+section#Projets ul.galerie-grid {
   padding: 0;
   -moz-column-count: 2;
        column-count: 2;
   -moz-column-gap: 10px;
        column-gap: 10px;
 }
-
-ul.galerie-grid li.galerie-item {
+section#Projets ul.galerie-grid li.galerie-item {
   margin-bottom: 10px;
   -moz-column-break-inside: avoid;
        break-inside: avoid;
 }
-
-ul.galerie-grid li.galerie-item img {
+section#Projets ul.galerie-grid li.galerie-item img {
   display: block;
-  width: 100%;
+  margin: auto;
+  width: 80%;
   height: auto;
+  max-width: 620px;
   border-radius: 15px;
 }
+section#Projets ul.galerie-grid li.galerie-item h3.galerie-title {
+  text-align: center;
+  font-size: 2rem;
+  font-family: var(--sous-titre);
+}
 
+#lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.747);
+}
+#lightbox i {
+  z-index: 1001;
+}
+
+#lightbox-img {
+  max-height: 80vh;
+  transition: transform 0.3s ease-in-out;
+}
+
+#lightbox-img.zoomed {
+  cursor: unset;
+}
+
+#lightbox .close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: cell;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: cell;
+}
+
+/* Ajustements responsive */
+@media (max-width: 768px) {
+  #lightbox-img {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  section#Projets {
+    min-height: 80vh;
+  }
+  section#Projets h2 {
+    font-size: 3rem;
+    text-align: center;
+    font-family: var(--titre);
+    padding-top: 1rem;
+  }
+  section#Projets hr {
+    width: 20%;
+    padding: 1px;
+    margin: 1rem auto;
+    background-color: rgba(var(--color3, 0.7));
+    border: 1px solid rgba(var(--color2, 1));
+    border-radius: 15px;
+  }
+  section#Projets ul.galerie-grid {
+    padding: 0;
+    -moz-column-count: 2;
+         column-count: 2;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
+  section#Projets ul.galerie-grid li.galerie-item {
+    margin-bottom: 10px;
+    -moz-column-break-inside: avoid;
+         break-inside: avoid;
+  }
+  section#Projets ul.galerie-grid li.galerie-item img {
+    display: block;
+    margin: auto;
+    width: 80%;
+    height: auto;
+    max-width: 620px;
+    border-radius: 15px;
+  }
+  section#Projets ul.galerie-grid li.galerie-item h3.galerie-title {
+    text-align: center;
+    font-size: 2rem;
+    font-family: var(--sous-titre);
+  }
+}
 section#Contact {
-  min-height: 100vh;
+  min-height: 80vh;
 }
 section#Contact h2 {
   font-size: 3rem;
