@@ -89,7 +89,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Fonction - Projets
 
-// Simule une liste d'images PNG dans le dossier /images/
 const dossierImages = "./Projets/";
 const listeImages = [
   "Accueil.png",
@@ -102,29 +101,72 @@ const listeImages = [
   "Moineau.png",
 ];
 
-// Crée l'élément <ul class="galerie-grid">
 const galerieUl = document.createElement("ul");
 galerieUl.className = "galerie-grid";
 
-// Pour chaque image, créer un <li class="galerie-item"><img ...></li>
-listeImages.forEach((nomFichier) => {
+// Création des <li> + animation & masquage
+listeImages.forEach((nomFichier, index) => {
   const li = document.createElement("li");
   li.className = "galerie-item";
 
   const img = document.createElement("img");
   img.src = `${dossierImages}${nomFichier}`;
-  img.alt = nomFichier.replace(".png", ""); // Enlève l'extension pour l'attribut alt
+  img.alt = nomFichier.replace(".png", "");
 
   const h3 = document.createElement("h3");
-  h3.textContent = nomFichier.replace(".png", ""); // Enlève l'extension pour le titre
+  h3.textContent = nomFichier.replace(".png", "");
   h3.className = "galerie-title";
 
   li.append(img, h3);
+
+  if (index > 3) {
+    li.classList.add("hidden");
+  }
+
   galerieUl.appendChild(li);
 });
 
-// Ajoute la galerie au conteneur
 document.getElementById("Projets").appendChild(galerieUl);
+
+// Boutons
+const btnPlus = document.createElement("button");
+btnPlus.textContent = "Voir plus";
+btnPlus.id = "voirPlusBtn";
+
+const btnMoins = document.createElement("button");
+btnMoins.textContent = "Voir moins";
+btnMoins.id = "voirMoinsBtn";
+btnMoins.style.display = "none";
+
+document.getElementById("Projets").append(btnPlus, btnMoins);
+
+// Événement : Voir plus
+btnPlus.addEventListener("click", () => {
+  const items = document.querySelectorAll(".galerie-item.hidden");
+  items.forEach((item) => {
+    item.classList.remove("hidden");
+    setTimeout(() => {
+      item.classList.add("fade-in");
+    }, 10);
+  });
+
+  btnPlus.style.display = "none";
+  btnMoins.style.display = "flex";
+});
+
+// Événement : Voir moins
+btnMoins.addEventListener("click", () => {
+  const items = document.querySelectorAll(".galerie-item");
+  items.forEach((item, index) => {
+    if (index > 3) {
+      item.classList.remove("fade-in");
+      item.classList.add("hidden");
+    }
+  });
+
+  btnMoins.style.display = "none";
+  btnPlus.style.display = "flex";
+});
 
 // Lightbox
 
