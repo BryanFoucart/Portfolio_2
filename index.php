@@ -19,9 +19,6 @@ $IDENTITE = $_ENV["IDENTITE"] ?? "Pierre Dupont";
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Portfolio de <?php echo htmlspecialchars($IDENTITE); ?>, développeur web junior" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <!-- <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" /> -->
   <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
   <link rel="shortcut icon" href="/assets/favicons/favicon.ico" />
@@ -31,7 +28,7 @@ $IDENTITE = $_ENV["IDENTITE"] ?? "Pierre Dupont";
   <link rel="stylesheet" href="./assets/styles/style.css" />
   <script type="module" src="./script.js"></script>
 
-  <title>Mon Portfolio</title>
+  <title><?php echo htmlspecialchars($IDENTITE); ?> - Portfolio WebDev</title>
 </head>
 
 <body>
@@ -63,14 +60,14 @@ $IDENTITE = $_ENV["IDENTITE"] ?? "Pierre Dupont";
         <h1>
           <?php echo htmlspecialchars($IDENTITE); ?>
         </h1>
-        <img src="./Sans titre-1.jpg" alt="<?php echo htmlspecialchars($IDENTITE); ?>" />
+        <img src="./assets/images/Sans titre-1.webp" alt="<?php echo htmlspecialchars($IDENTITE); ?>" />
         <h2>Développeur Web</h2>
       </div>
       <div id="bienvenue">
         <h2>Bienvenue sur mon portfolio !</h2>
         <div class="button">
           <a href="#A_propos"><button>En savoir plus</button></a>
-          <a href="./Curriculum_Vitae_Bryan_Foucart.pdf" download="CV_Bryan_Foucart.pdf"><button>Télécharger mon CV</button></a>
+          <a href="./assets/Curriculum_Vitae.pdf" download="CV_<?php echo htmlspecialchars($IDENTITE); ?>"><button>Télécharger mon CV</button></a>
         </div>
       </div>
     </section>
@@ -79,7 +76,7 @@ $IDENTITE = $_ENV["IDENTITE"] ?? "Pierre Dupont";
       <hr>
       <div id="container-A_propos">
         <div id="a_propos_left">
-          <img src="./Sans titre-1.jpg" alt="<?php echo htmlspecialchars($IDENTITE); ?>" />
+          <img src="./assets/images/Sans titre-1.webp" alt="<?php echo htmlspecialchars($IDENTITE); ?>" />
           <p>
             Je m'appelle <?php echo htmlspecialchars($IDENTITE); ?> et je suis développeur web junior. Je suis passionné par le développement web et je suis actuellement en formation chez l'AFCI d'Arras. Je suis à la recherche d'une entreprise pour débuter ma carrière.
           </p>
@@ -110,7 +107,7 @@ $IDENTITE = $_ENV["IDENTITE"] ?? "Pierre Dupont";
           <div class="button">
 
             <a href="#Competences"><button>Mes compétences</button></a>
-            <a href="./Curriculum_Vitae_Bryan_Foucart.pdf" download="CV_Bryan_Foucart.pdf"><button>Télécharger mon CV</button></a>
+            <a href="./assets/Curriculum_Vitae.pdf" download="CV_<?php echo htmlspecialchars($IDENTITE); ?>"><button>Télécharger mon CV</button></a>
           </div>
         </div>
       </div>
@@ -167,19 +164,19 @@ $IDENTITE = $_ENV["IDENTITE"] ?? "Pierre Dupont";
             <h3 class="titre_section">FRAMEWORKS</h3>
             <ul>
               <li>
-                <div class="text-left">bootstrap<span class="right">5%</span></div><span class="bar"><span data-skill="framework_bootstrap"></span></span> <!-- skill bar 1 -->
+                <div class="text-left">bootstrap<span class="right">5%</span></div><span class="bar"><span data-skill="framework_bootstrap"></span></span>
               </li>
 
               <li>
-                <div class="text-left">tailwind<span class="right">10%</span></div><span class="bar"><span data-skill="framework_tailwind"></span></span><!-- skill bar 2 -->
+                <div class="text-left">tailwind<span class="right">10%</span></div><span class="bar"><span data-skill="framework_tailwind"></span></span>
               </li>
 
               <li>
-                <div class="text-left">react<span class="right">2%</span></div><span class="bar"><span data-skill="framework_react"></span></span><!-- skill bar 3 -->
+                <div class="text-left">react<span class="right">2%</span></div><span class="bar"><span data-skill="framework_react"></span></span>
               </li>
 
               <li>
-                <div class="text-left">symfony<span class="right">1%</span></div><span class="bar"><span data-skill="framework_symfoni"></span></span><!-- skill bar 4 -->
+                <div class="text-left">symfony<span class="right">1%</span></div><span class="bar"><span data-skill="framework_symfoni"></span></span>
               </li>
             </ul>
           </div>
@@ -187,19 +184,19 @@ $IDENTITE = $_ENV["IDENTITE"] ?? "Pierre Dupont";
             <h3 class="titre_section">AUTRES</h3>
             <ul>
               <li>
-                <div class="text-left">anglais<span class="right">45%</span></div><span class="bar"><span data-skill="autre_anglais"></span></span> <!-- skill bar 1 -->
+                <div class="text-left">anglais<span class="right">45%</span></div><span class="bar"><span data-skill="autre_anglais"></span></span>
               </li>
 
               <li>
-                <div class="text-left">github<span class="right">40%</span></div><span class="bar"><span data-skill="autre_github"></span></span><!-- skill bar 2 -->
+                <div class="text-left">github<span class="right">40%</span></div><span class="bar"><span data-skill="autre_github"></span></span>
               </li>
 
               <li>
-                <div class="text-left">postman<span class="right">15%</span></div><span class="bar"><span data-skill="autre_postman"></span></span><!-- skill bar 3 -->
+                <div class="text-left">postman<span class="right">15%</span></div><span class="bar"><span data-skill="autre_postman"></span></span>
               </li>
 
               <li>
-                <div class="text-left">visual studio code<span class="right">40%</span></div><span class="bar"><span data-skill="autre_visual_studio_code"></span></span><!-- skill bar 4 -->
+                <div class="text-left">visual studio code<span class="right">40%</span></div><span class="bar"><span data-skill="autre_visual_studio_code"></span></span>
               </li>
             </ul>
           </div>
@@ -228,7 +225,7 @@ $IDENTITE = $_ENV["IDENTITE"] ?? "Pierre Dupont";
             <input type="text" name="subject" required>
 
             <label for="message">Message :</label>
-            <textarea name="message" rows="10" required></textarea>
+            <textarea name="message" rows="5" cols="30" required></textarea>
 
             <button type="submit">Envoyer</button>
           </form>
@@ -249,7 +246,7 @@ $IDENTITE = $_ENV["IDENTITE"] ?? "Pierre Dupont";
     </section>
   </main>
   <footer id="footer">
-    <div id="copyright"><i class="fa-regular fa-copyright"></i><span>Portfolio - Bryan Foucart</span></div>
+    <div id="copyright"><i class="fa-regular fa-copyright"></i><span>Portfolio - <?php echo htmlspecialchars($IDENTITE); ?></span></div>
     <ul id="reseaux">
       <li><a href="https://fr-fr.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
       <li><a href="https://fr.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a></li>

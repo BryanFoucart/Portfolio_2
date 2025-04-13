@@ -57,6 +57,10 @@ section#Contact {
           margin: 8px 0 8px 2%;
         }
 
+        & textarea {
+          resize: none;
+        }
+
         & button {
           background-color: rgba(var(--color4), 1);
           color: rgba(var(--color1), 1);

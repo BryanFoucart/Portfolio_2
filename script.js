@@ -89,16 +89,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Fonction - Projets
 
-const dossierImages = "./Projets/";
+const dossierImages = "./assets/images/projets/";
 const listeImages = [
-  "Accueil.png",
-  "Galerie.png",
-  "Crypto.png",
-  "Crypto - Light.png",
-  "Carrousel.png",
-  "Lightbox.png",
-  "Contact.png",
-  "Moineau.png",
+  "Accueil.webp",
+  "Galerie.webp",
+  "Crypto.webp",
+  "Crypto - Light.webp",
+  "Carrousel.webp",
+  "Lightbox.webp",
+  "Contact.webp",
+  "Moineau.webp",
 ];
 
 const galerieUl = document.createElement("ul");
@@ -111,10 +111,10 @@ listeImages.forEach((nomFichier, index) => {
 
   const img = document.createElement("img");
   img.src = `${dossierImages}${nomFichier}`;
-  img.alt = nomFichier.replace(".png", "");
+  img.alt = nomFichier.replace(".webp", "");
 
   const h3 = document.createElement("h3");
-  h3.textContent = nomFichier.replace(".png", "");
+  h3.textContent = nomFichier.replace(".webp", "");
   h3.className = "galerie-title";
 
   li.append(img, h3);

@@ -1285,6 +1285,9 @@ section#Contact #contact_container div#Formulaire #contactForm {
 section#Contact #contact_container div#Formulaire #contactForm label {
   margin: 8px 0 8px 2%;
 }
+section#Contact #contact_container div#Formulaire #contactForm textarea {
+  resize: none;
+}
 section#Contact #contact_container div#Formulaire #contactForm button {
   background-color: rgba(var(--color4), 1);
   color: rgba(var(--color1), 1);
