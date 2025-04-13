@@ -1,6 +1,5 @@
 footer#footer {
   min-height: 10vh;
-  min-width: 100%;
   background-color: rgba(var(--color1), 0.7);
   color: rgba(var(--color5), 1);
   display: flex;
@@ -8,7 +7,8 @@ footer#footer {
   align-items: center;
   justify-content: center;
   gap: 8px;
-
+  max-width: 1920px;
+  margin: auto;
   & div#copyright {
     font-size: 1.5rem;
     display: flex;

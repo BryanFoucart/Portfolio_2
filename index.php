@@ -216,16 +216,16 @@ $IDENTITE = $_ENV["IDENTITE"] ?? "Pierre Dupont";
           <h3>Formulaire de contact</h3>
           <form id="contactForm" action="send.php" method="POST">
             <label for="name">Nom :</label>
-            <input type="text" name="name" required>
+            <input type="text" name="name" id="name" required>
 
             <label for="email">Email :</label>
-            <input type="email" name="email" required>
+            <input type="email" name="email" id="email" required>
 
             <label for="subject">Sujet :</label>
-            <input type="text" name="subject" required>
+            <input type="text" name="subject" id="subject" required>
 
             <label for="message">Message :</label>
-            <textarea name="message" rows="5" cols="30" required></textarea>
+            <textarea name="message" id="message" rows="5" cols="30" required></textarea>
 
             <button type="submit">Envoyer</button>
           </form>
@@ -240,7 +240,7 @@ $IDENTITE = $_ENV["IDENTITE"] ?? "Pierre Dupont";
               <i class="fas fa-at"></i><span><?php echo htmlspecialchars($MAIL); ?></span>
             </li>
           </ul>
-          <iframe src="<?php echo htmlspecialchars($ADRESSE); ?>" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="<?php echo htmlspecialchars($ADRESSE); ?>" title="Emplacement Maps" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </section>
