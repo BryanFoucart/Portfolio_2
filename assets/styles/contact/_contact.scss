@@ -20,6 +20,7 @@ section#Contact {
     display: flex;
     justify-content: space-around;
     gap: 8px;
+    padding-bottom: 1rem;
 
     & div#Formulaire,
     div#Informations {
@@ -73,7 +74,6 @@ section#Contact {
         }
         & button:hover {
           background-color: rgba(var(--color3), 1);
-          color: rgba(var(--color5), 1);
         }
       }
 

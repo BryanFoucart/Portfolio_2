@@ -25,6 +25,7 @@ section#Projets {
       break-inside: avoid;
       transition: opacity 0.5s ease, transform 0.5s ease;
       opacity: 1;
+      transform: translateY(0);
       img {
         display: block;
         margin: auto;
@@ -46,15 +47,20 @@ section#Projets {
         padding: 0.5rem 1rem;
       }
     }
+
+    li.galerie-item.fade-in,
+    li.galerie-item.fade-out {
+      animation-fill-mode: both;
+    }
+
+    & li.galerie-item.fade-in {
+      animation: fadeInUp 0.5s ease forwards;
+    }
+    & li.galerie-item.fade-out {
+      animation: fadeOutDown 0.5s ease forwards;
+    }
     & li.galerie-item.hidden {
       display: none;
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    & li.galerie-item.fade-in {
-      display: block !important;
-      opacity: 1 !important;
-      transform: translateY(0) !important;
     }
   }
   button {
@@ -69,7 +75,33 @@ section#Projets {
   }
   button:hover {
     background-color: rgba(var(--color3), 1);
-    color: rgba(var(--color5), 1);
+  }
+  button:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+// Animation Boutton Voir Plus / Voir Moins
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
   }
 }
 
@@ -159,16 +191,6 @@ section#Projets {
         }
       }
     }
-    button {
-      background-color: rgba(var(--color4), 1);
-      color: rgba(var(--color1), 1);
-      padding: 1rem 1rem;
-      border-radius: 8px;
-      font-family: var(--button);
-      transition: all 0.3s ease-in-out;
-      margin: 1rem auto;
-      display: flex;
-    }
   }
 }
 @media only screen and (max-width: 992px) {
@@ -186,16 +208,6 @@ section#Projets {
           margin: 0.5rem auto;
         }
       }
-    }
-    button {
-      background-color: rgba(var(--color4), 1);
-      color: rgba(var(--color1), 1);
-      padding: 1rem 1rem;
-      border-radius: 8px;
-      font-family: var(--button);
-      transition: all 0.3s ease-in-out;
-      margin: 1rem auto;
-      display: flex;
     }
   }
 }
@@ -219,16 +231,6 @@ section#Projets {
         }
       }
     }
-    button {
-      background-color: rgba(var(--color4), 1);
-      color: rgba(var(--color1), 1);
-      padding: 1rem 1rem;
-      border-radius: 8px;
-      font-family: var(--button);
-      transition: all 0.3s ease-in-out;
-      margin: 1rem auto;
-      display: flex;
-    }
   }
 }
 @media only screen and (max-width: 544px) {
@@ -247,16 +249,6 @@ section#Projets {
           max-width: 470px;
         }
       }
-    }
-    button {
-      background-color: rgba(var(--color4), 1);
-      color: rgba(var(--color1), 1);
-      padding: 1rem 1rem;
-      border-radius: 8px;
-      font-family: var(--button);
-      transition: all 0.3s ease-in-out;
-      margin: 1rem auto;
-      display: flex;
     }
   }
 }

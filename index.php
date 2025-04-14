@@ -216,16 +216,16 @@ $IDENTITE = $_ENV["IDENTITE"] ?? "Pierre Dupont";
           <h3>Formulaire de contact</h3>
           <form id="contactForm" action="send.php" method="POST">
             <label for="name">Nom :</label>
-            <input type="text" name="name" id="name" required>
+            <input type="text" name="name" id="name" placeholder="Votre nom" required>
 
             <label for="email">Email :</label>
-            <input type="email" name="email" id="email" required>
+            <input type="email" name="email" id="email" placeholder="exemple@email.com" required>
 
             <label for="subject">Sujet :</label>
-            <input type="text" name="subject" id="subject" required>
+            <input type="text" name="subject" id="subject" placeholder="Sujet du message" required>
 
             <label for="message">Message :</label>
-            <textarea name="message" id="message" rows="5" cols="30" required></textarea>
+            <textarea name="message" id="message" rows="5" cols="30" placeholder="Votre message" required></textarea>
 
             <button type="submit">Envoyer</button>
           </form>

@@ -140,32 +140,77 @@ btnMoins.style.display = "none";
 
 document.getElementById("Projets").append(btnPlus, btnMoins);
 
+let enAnimation = false;
 // Événement : Voir plus
 btnPlus.addEventListener("click", () => {
+  if (enAnimation) return;
+  enAnimation = true;
+  btnPlus.disabled = true;
+  btnMoins.disabled = true;
+
   const items = document.querySelectorAll(".galerie-item.hidden");
-  items.forEach((item) => {
-    item.classList.remove("hidden");
+  items.forEach((item, i) => {
+    item.classList.remove("hidden", "fade-in", "fade-out");
+    void item.offsetWidth; // reflow
+
     setTimeout(() => {
       item.classList.add("fade-in");
-    }, 10);
-  });
 
-  btnPlus.style.display = "none";
-  btnMoins.style.display = "flex";
+      // Retirer la classe après l’animation
+      setTimeout(() => {
+        item.classList.remove("fade-in");
+
+        const animEnCours = document.querySelectorAll(
+          ".fade-in, .fade-out"
+        ).length;
+        if (animEnCours === 0) {
+          enAnimation = false;
+          btnPlus.disabled = false;
+          btnMoins.disabled = false;
+          btnPlus.style.display = "none";
+          btnMoins.style.display = "flex";
+        }
+      }, 500); // durée anim + marge
+    }, i * 100);
+  });
 });
 
 // Événement : Voir moins
 btnMoins.addEventListener("click", () => {
-  const items = document.querySelectorAll(".galerie-item");
-  items.forEach((item, index) => {
-    if (index > 3) {
-      item.classList.remove("fade-in");
-      item.classList.add("hidden");
-    }
-  });
+  if (enAnimation) return;
+  enAnimation = true;
+  btnPlus.disabled = true;
+  btnMoins.disabled = true;
 
-  btnMoins.style.display = "none";
-  btnPlus.style.display = "flex";
+  const items = document.querySelectorAll(".galerie-item");
+  const àCacher = Array.from(items).slice(4); // tous sauf les 4 premiers
+
+  àCacher.forEach((item, i) => {
+    item.classList.remove("fade-in", "fade-out", "hidden");
+    void item.offsetWidth;
+
+    setTimeout(() => {
+      item.classList.add("fade-out");
+
+      // Fin d’anim : attendre un délai fixe
+      setTimeout(() => {
+        item.classList.remove("fade-out");
+        item.classList.add("hidden");
+
+        // Vérifie s’il reste des items en animation
+        const animEnCours = document.querySelectorAll(
+          ".fade-in, .fade-out"
+        ).length;
+        if (animEnCours === 0) {
+          enAnimation = false;
+          btnPlus.disabled = false;
+          btnMoins.disabled = false;
+          btnMoins.style.display = "none";
+          btnPlus.style.display = "flex";
+        }
+      }, 500); // durée de l'animation + petite marge
+    }, i * 100); // cascade
+  });
 });
 
 // Lightbox
